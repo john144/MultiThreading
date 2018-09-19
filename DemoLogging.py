@@ -76,9 +76,7 @@ def main():
             pass
         else:
             msg = queue_handler.format(record)
-            logText = form.FindElement('Log').Get()
-            logText += msg
-            form.FindElement('Log').Update(logText)
+            form.FindElement('Log').Update(value['Log']+msg)
 
     exit()
 
